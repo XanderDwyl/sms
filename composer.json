@@ -1,0 +1,8 @@
+{
+    "name": "jhunexjun/sms",
+    "autoload": {
+        "psr-4" : {
+            "" : "Sms"
+        }
+    }
+}
