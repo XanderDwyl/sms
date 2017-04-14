@@ -4,6 +4,8 @@
 	At least PHP 5.3.
 */
 
+namespace Jsms;
+
 const DEVICE_NOT_SET = 0;
 const DEVICE_IS_SET = 1;
 const DEVICE_IS_OPEN = 2;
@@ -173,7 +175,7 @@ class Sms {
 						if ($this->sendCmd("$message".chr(26)))
 							if (preg_match("/\+CMGS:\s+\d+[\r?\n]*OK/", $this->getDeviceResponse()))
 								return true;
-		
+
 		return false;
 	}
 
